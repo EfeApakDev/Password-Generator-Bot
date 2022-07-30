@@ -11,56 +11,56 @@ Bot = Client(
 )
 
 TEXT = """**Hai {},
-I Am Password Generator Bot. I Can Generate Strong Passwords At Your Wish Length (Max. 84).**
+Merhaba Ben Şifre Üretici Bot. İstediğin Uzunlukta Güçlü Şifre Oluşturabilirim (Max. 84).**
 
-For Know More /help"""
+Daha Fazla Bilgi İçin /help"""
 
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Channel 🔰", url = "https://telegram.me/EKBOTZ_UPDATE"),
-            InlineKeyboardButton("Support Group ⭕️", url = "https://telegram.me/ekbotz_support")
+            InlineKeyboardButton("Kanal 🔰", url = "https://t.me/SancakBotlar"),
+            InlineKeyboardButton("Support Grup ⭕️", url = "https://t.me/muhabbetofkings")
         ],
         [
-            InlineKeyboardButton("Repo 🗂️", url = "https://github.com/M-fazin/Password-Generator-Bot"),
-            InlineKeyboardButton("Deploy 🗃️", url = "https://heroku.com/deploy?template=https://github.com/M-fazin/Password-Generator-Bot")
+            InlineKeyboardButton("Sahip 👮‍♂️", url = "https://t.me/sancakbegi"),
+            InlineKeyboardButton("Arşiv Kanalımız ⚡", url = "https://t.me/CyberTurkish")
         ],
         [
-            InlineKeyboardButton("Developer 💡", url = "https://github.com/M-fazin/")
+            InlineKeyboardButton("Developer 💡", url = "https://t.me/sancakbegi")
         ]
     ]
 )
 
-HELP = """Hai {},
-**There Is Nothing To Know More.**
+HELP = """Merhaba {},
+**Daha Fazla Bilgi.**
 
-- Send Me The Limit Of Your Password and Keys (optional)
+- Bana Şifrelerin veya anahtarların limitini gönder (isteğe bağlı)
   Like :-
     `10 abcd1234`
     `10`
-- I Will Give The Password Of That Limit.
+- Bu limitin Şifresini vereceğim.
 
-**Note :-**
-• Only Digits Are Allowed
-• Maximum Allowed Digits Till 100 (I Can't Generate Passwords Above The Length 84)"""
+**Not :-**
+• Sadece Rakamlara İzin Verilir
+• İzin Verilen Maksimim Rakam 100 ( 84 Uzunluğunun Üzerinde Şifre Oluşturamıyorum)"""
 
 HELP_BUTTON = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("🧑‍💻 Channel", url = "https://telegram.me/EKBOTZ_UPDATE"),
-            InlineKeyboardButton("🗃️ Source Code", url = "https://github.com/M-fazin/Password-Generator-Bot")
+            InlineKeyboardButton("🧑‍💻 KANAL", url = "https://telegram.me/SancakBotlar"),
+            InlineKeyboardButton("👮‍♂️ DEVELOPER", url = "https://t.me/sancakbegi")
         ]
     ]
 )
 
-ABOUT = """--**About Me**--
+ABOUT = """--**🇹🇷Benim Hakkımda🇹🇷**--
 
-**🤖 Bot :** Password Generator Bot
-**🧑‍💻 Developer :** [M-fazin](https://github.com/M-fazin)
-**💻 Channel :** @EKBOTZ_UPDATE
-**☎️ Support :** @ekbotz_support
-**🗂️ Source Code :** [Password Generator Bot](https://github.com/M-fazin/Password-Generator-Bot)
-**⚙️ Language :** Python 3
+**🤖 Bot :** Sancak Şifre Üretici Bot
+**🧑‍💻 Developer :** [SancakBegi](https://t.me/SancakBegi)
+**💻 Kanal :** @SancakBotlar
+**☎️ Support :** @muhabbetofkingd
+**🗂️ Arşiv Kanalımız :** [Cyber Turkish](https://t.me/CyberTurkish)
+**⚙️ Dil :** Python 3
 **🛡️ Framework :** Pyrogram"""
 
 
@@ -109,10 +109,10 @@ async def password(bot, update):
         return
     
     if limit > 100 or limit <= 0:
-        text = "Sorry... Failed To Create Password, Because Limit is 1 to 100."
+        text = "Üzgünüm... Şifre Üretilirken Hata Oluştu, çünkü limit 1 ile 100 arasında olduğu için "
     else:
         random_value = "".join(random.sample(password, limit))
-        text = f"**Limit :-** `{str(limit)}`.\n**Password :-** `{random_value}`**\n\nJoin @EKBOTZ_UPDATE"
+        text = f"**Limit :-** `{str(limit)}`.\n**Password :-** `{random_value}`**\n\nJoin @SancakBotlar"
     
     await message.edit_text(text, True)
 
